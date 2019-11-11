@@ -1,18 +1,18 @@
 <template>
   <div class="splash" v-bind:class="{ 'hide': $route.path !== '/' }">
     <div class="text">
-      Hello, my name is
+      Hi, my name is
       <span class="highlight">Ben Duwé</span>.
       <br />I'm a junior web developer.
     </div>
-    <button>
-      <router-link to="/portfolio">
-        View my projects
-        <span class="btn-icon">
-          <i class="fas fa-arrow-right"></i>
-        </span>
-      </router-link>
-    </button>
+    <div>
+      <button>
+        <router-link to="/about">More about me</router-link>
+      </button>
+      <button>
+        <router-link to="/portfolio">View my projects</router-link>
+      </button>
+    </div>
     <canvas></canvas>
   </div>
 </template>
@@ -59,20 +59,20 @@ export default {
       this.radius = radius;
       this.minRadius = radius;
       this.maxRadius = radius * 9;
-      this.color = "#cfcfcf";
-      this.stroke = "rgba(255, 255, 255, 0.1)";
+      this.color = "rgba(75, 192, 176, 0.4)";
+      this.stroke = "rgba(75, 192, 176, 0.4)";
 
       this.draw = function() {
         c.beginPath();
-        c.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
+        //c.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
         c.moveTo(this.x, this.y + this.radius);
         c.lineTo(this.x + 1300, this.y - 2000);
         c.strokeStyle = this.stroke;
-        c.lineWidth = 1.5;
+        c.lineWidth = 1.3;
         c.stroke();
 
-        c.fillStyle = this.color;
-        c.fill();
+        // c.fillStyle = this.color;
+        // c.fill();
       };
 
       this.update = function() {
@@ -93,9 +93,9 @@ export default {
           mouse.x - this.x < 50 &&
           mouse.x - this.x > 0 //&&
         ) {
-          this.stroke = "rgba(255, 255, 255, 0.4)";
+          this.stroke = "rgba(75, 192, 176, 0.4)";
         } else {
-          this.stroke = "rgba(255, 255, 255, 0.1)";
+          this.stroke = "rgba(75, 192, 176, 0.1)";
         }
 
         this.draw();
@@ -108,7 +108,7 @@ export default {
       circleArray = [];
       if (window.innerWidth < 768) {
         for (var i = 0; i < 50; i++) {
-          var radius = 0.3;
+          var radius = 0.2;
           var x = Math.random() * (innerWidth - 2 * radius) + radius;
           var y = Math.random() * (splash.offsetHeight - 2 * radius) + radius;
           var dx = Math.random() - 0.5;
@@ -117,7 +117,7 @@ export default {
         }
       } else {
         for (i = 0; i < 100; i++) {
-          radius = 0.3;
+          radius = 0.2;
           x = Math.random() * (innerWidth - 2 * radius) + radius;
           y = Math.random() * (splash.offsetHeight - 2 * radius) + radius;
           dx = Math.random() - 0.5;
@@ -150,10 +150,12 @@ canvas {
   top: 0;
   left: 0;
   width: 100vw;
-  background: #808080;
+  background: #fcfcfc;
   z-index: -1;
 }
 .splash {
+  color: #2c383b;
+  font-style: italic;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -170,19 +172,20 @@ canvas {
   font-size: 1.4rem;
 }
 .highlight {
-  color: #42b983;
+  color: #4bc0b0;
 }
 
 button {
+  margin: 10px;
   padding: 5px;
-  border: 2px solid #c7c7c7;
+  border: 2px solid #ff312e;
   background: none;
 }
 
 button a {
   text-decoration: none;
   font-weight: bold;
-  color: #2c3e50;
+  color: #2c383b;
 }
 @media only screen and (min-width: 768px) {
   .text {
