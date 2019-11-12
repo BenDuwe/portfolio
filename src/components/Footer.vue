@@ -17,6 +17,7 @@ export default {
 footer {
   /* position: sticky;
   bottom: 0px; */
+  margin-top: 1em;
   padding: 1rem;
   color: #fcfcfc;
   background: #2c383b;

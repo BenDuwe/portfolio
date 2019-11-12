@@ -10,10 +10,10 @@
       <p>{{description}}</p>
       <ul>
         <li>
-          <a :href="repository">View source</a>
+          <a :href="repository" rel="noopener noreferrer" target="_blank">View source</a>
         </li>
         <li v-if="page">
-          <a :href="page">View online</a>
+          <a :href="page" rel="noopener noreferrer" target="_blank">View online</a>
         </li>
       </ul>
     </div>
