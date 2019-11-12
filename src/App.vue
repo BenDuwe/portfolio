@@ -26,6 +26,7 @@ export default {
 }
 
 #app {
+  min-height: 100vh;
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -33,12 +34,13 @@ export default {
   color: #2c3e50;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 .one-screen {
   height: 100vh;
 }
 .home-padding {
-  padding: 1em 1em 0 1em;
+  padding: 1em 1em 3.3em 1em;
 }
 h2 {
   padding-bottom: 1em;

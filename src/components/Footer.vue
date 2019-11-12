@@ -15,10 +15,11 @@ export default {
 
 <style scoped>
 footer {
-  /* position: sticky;
-  bottom: 0px; */
-  margin-top: 1em;
-  padding: 1rem;
+  position: absolute;
+  bottom: 0px;
+  width: 100vw;
+  margin-top: 1.5em;
+  padding: 1rem 0;
   color: #fcfcfc;
   background: #2c383b;
   border-top: 3px solid #4bc0b0;
