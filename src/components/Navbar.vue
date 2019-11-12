@@ -49,6 +49,7 @@ export default {
   justify-content: space-between;
   align-items: center;
   border-bottom: 3px solid #4bc0b0;
+  z-index: 1;
 }
 
 ul {
@@ -74,7 +75,7 @@ ul * {
 }
 ul li {
   display: inline-block;
-  list-style: outside none none;
+  list-style: none;
   margin: 0.5em 0.3em;
   padding: 0;
 }

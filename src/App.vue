@@ -22,6 +22,7 @@ export default {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  text-decoration: none;
 }
 
 #app {
@@ -37,10 +38,10 @@ export default {
   height: 100vh;
 }
 .home-padding {
-  padding: 15px;
+  padding: 1em 1em 0 1em;
 }
 h2 {
-  padding-bottom: 15px;
+  padding-bottom: 1em;
 }
 
 .fade-enter-active,
@@ -53,5 +54,8 @@ h2 {
 .fade-enter,
 .fade-leave-active {
   opacity: 0;
+}
+footer {
+  margin: 0 -1em;
 }
 </style>
