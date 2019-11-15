@@ -1,5 +1,6 @@
 <template>
-  <div class="splash">
+  <div class="splash anchor">
+    <a name="splash"></a>
     <div class="text">
       Hi, my name is
       <span class="highlight">Ben Duwé</span>.
@@ -7,15 +8,20 @@
     </div>
     <div>
       <button>
-        <router-link to="/about">About me</router-link>
+        <a href="#about">About me</a>
       </button>
       <button>
-        <router-link to="/portfolio">My projects</router-link>
+        <a href="#portfolio">My projects</a>
       </button>
     </div>
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-      <path d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z" fill="#2C383B" />
-    </svg>
+    <a href="#about">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+        <path
+          d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z"
+          fill="#2C383B"
+        />
+      </svg>
+    </a>
     <canvas></canvas>
   </div>
 </template>
@@ -153,7 +159,7 @@ canvas {
   top: 0;
   left: 0;
   width: 100vw;
-  background: rgba(75, 192, 176, 0.24);
+  background: rgb(244, 246, 247);
   z-index: -1;
 }
 .splash {
@@ -172,7 +178,7 @@ svg {
   height: 50px;
   width: 50px;
   position: absolute;
-  bottom: 1rem;
+  bottom: 3rem;
   left: 50%;
   transform: translateX(-50%);
 }

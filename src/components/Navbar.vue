@@ -1,6 +1,6 @@
 <template>
   <div id="nav">
-    <router-link to="/">
+    <a href="#top">
       <svg
         width="30"
         height="45"
@@ -17,16 +17,22 @@
           fill="rgb(252, 252, 252)"
         />
       </svg>
-    </router-link>
+    </a>
     <ul>
       <li>
-        <router-link to="/about">About Me</router-link>
+        <a href="#about">About Me</a>
       </li>
       <li>
         <p>|</p>
       </li>
       <li>
-        <router-link to="/portfolio">Projects</router-link>
+        <a href="#portfolio">Projects</a>
+      </li>
+      <li>
+        <p>|</p>
+      </li>
+      <li>
+        <a href="#contact">Contact</a>
       </li>
     </ul>
   </div>

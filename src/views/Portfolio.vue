@@ -1,5 +1,6 @@
 <template>
-  <div class="portfolio">
+  <div class="portfolio anchor">
+    <a name="portfolio"></a>
     <h2>Projects</h2>
     <Project
       v-for="project in projects"
@@ -112,7 +113,7 @@ export default {
 </script>
 
 <style scoped>
-/* .portfolio {
-  padding: 15px;
-} */
+.portfolio {
+  padding: 1rem;
+}
 </style>

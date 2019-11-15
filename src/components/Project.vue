@@ -44,13 +44,8 @@ export default {
 <style scoped>
 .project {
   z-index: -1;
-  /* height: fit-content; */
-  /* display: flex;
-  flex-direction: column;
-  align-items: center; */
-  /* margin-bottom: 3rem; */
   padding: 1.5em 1em 1em 1em;
-  margin: -1.5em 0;
+  margin: 0 -1rem;
   clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 90%);
   -webkit-clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 90%);
 }

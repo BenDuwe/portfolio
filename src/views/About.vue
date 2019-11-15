@@ -1,5 +1,6 @@
 <template>
-  <div class="about">
+  <div class="about anchor">
+    <a name="about"></a>
     <h2>About Me</h2>
     <div class="person">
       <img src="@/assets/profile picture.jpg" alt="Profile picture" />
@@ -7,9 +8,9 @@
         class="description"
       >I'm a studious person, who's eager to learn more about the ins and outs of the world around us. My interest in nature and science first led me to obtain a master's degree in biology. And now my passion for technology has made me start learning web development and I've been enjoying every part of it.</p>
     </div>
-    <div class="skils">
+    <div class="skills">
       <h4>Skills:</h4>
-      <ul class="btm-spc">
+      <ul class="skill-list">
         <li>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
             <title>HTML5</title>
@@ -365,6 +366,11 @@
         </li>
       </ul>
     </div>
+    <div class="more">
+      <h4>Additional information:</h4>
+      <p>Have a look at my CV</p>
+      <a href="https://benduwe.github.io/my-CV/CV-responsive.html"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 2v20h24v-20h-24zm13 15h-10v-.417c-.004-1.112.044-1.747 1.324-2.043 1.403-.324 2.787-.613 2.122-1.841-1.973-3.637-.563-5.699 1.554-5.699 2.077 0 3.521 1.985 1.556 5.699-.647 1.22.688 1.51 2.121 1.841 1.284.297 1.328.936 1.323 2.057v.403zm8 0h-6v-2h6v2zm0-4h-6v-2h6v2zm0-4h-6v-2h6v2z"/></svg></a>
+    </div>
   </div>
 </template>
 
@@ -386,13 +392,15 @@ img {
 .description {
   text-align: justify;
 }
-ul {
+.skill-list {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 li {
-  flex-grow: 4;
+  min-width: 25%;
+  flex-basis: inherit;
 }
 svg {
   border-radius: 0.2rem;

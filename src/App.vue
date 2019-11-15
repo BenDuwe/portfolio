@@ -5,6 +5,7 @@
     <div class="content">
       <About />
       <Portfolio />
+      <Contact />
       <div class="scroll-up">
         <a class="go-up" href="#top">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
@@ -28,14 +29,16 @@ import Navbar from "./components/Navbar";
 import Splash from "./components/Splash";
 import About from "./views/About";
 import Portfolio from "./views/Portfolio";
+import Contact from "./views/Contact";
 import Footer from "./components/Footer";
 export default {
   name: "App",
   components: {
     Navbar,
     Splash,
-    Portfolio,
     About,
+    Portfolio,
+    Contact,
     Footer
   }
 };
@@ -56,6 +59,16 @@ body {
   background: #fcfcfc;
 }
 
+/*Getting the anchors adjusted */
+.anchor > a:first-child {
+  position: absolute;
+  left: 0px;
+  top: -4rem;
+}
+.anchor {
+  position: relative;
+}
+
 #app {
   min-height: 100vh;
   font-family: "Avenir", Helvetica, Arial, sans-serif;
@@ -67,6 +80,7 @@ body {
   flex-direction: column;
   position: relative;
 }
+
 .content {
   position: relative;
 }
@@ -94,7 +108,7 @@ h2 {
   position: sticky;
   bottom: 0.5rem;
   right: 0.5rem;
-  margin: 0.5rem 0 0 auto;
+  margin: 1rem 0 0 auto;
   transition: opacity 0.5s;
 }
 .scroll-up:hover {
@@ -106,5 +120,11 @@ h2 {
   align-items: center;
   height: 2rem;
   width: 2rem;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }
 </style>
