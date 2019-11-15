@@ -11,20 +11,17 @@
       :page="project.page"
       :image="project.image"
     />
-    <Footer />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
 import Project from "@/components/Project.vue";
-import Footer from "@/components/Footer";
 
 export default {
   name: "portfolio",
   components: {
-    Project,
-    Footer
+    Project
   },
   data() {
     return {

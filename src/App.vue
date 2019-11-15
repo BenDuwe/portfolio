@@ -1,18 +1,42 @@
 <template>
-  <div id="app" v-bind:class="{ 'one-screen': $route.path === '/' }">
+  <div id="app">
     <Navbar />
-    <transition name="fade" mode="out-in">
-      <router-view v-bind:class="{ 'home-padding': $route.path !== '/' }" />
-    </transition>
+    <Splash />
+    <div class="content">
+      <About />
+      <Portfolio />
+      <div class="scroll-up">
+        <a class="go-up" href="#top">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <path
+              d="M0 16.67l2.829 2.83 9.175-9.339 9.167 9.339 2.829-2.83-11.996-12.17z"
+              fill="#FCFCFC"
+            />
+          </svg>
+        </a>
+      </div>
+    </div>
+    <!-- <transition name="fade" mode="out-in">
+      <router-view />
+    </transition>-->
+    <Footer />
   </div>
 </template>
 
 <script>
 import Navbar from "./components/Navbar";
+import Splash from "./components/Splash";
+import About from "./views/About";
+import Portfolio from "./views/Portfolio";
+import Footer from "./components/Footer";
 export default {
   name: "App",
   components: {
-    Navbar
+    Navbar,
+    Splash,
+    Portfolio,
+    About,
+    Footer
   }
 };
 </script>
@@ -23,6 +47,13 @@ export default {
   padding: 0;
   margin: 0;
   text-decoration: none;
+}
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+body {
+  background: #fcfcfc;
 }
 
 #app {
@@ -36,11 +67,8 @@ export default {
   flex-direction: column;
   position: relative;
 }
-.one-screen {
-  height: 100vh;
-}
-.home-padding {
-  padding: 1em 1em 3.3em 1em;
+.content {
+  position: relative;
 }
 h2 {
   padding-bottom: 1em;
@@ -57,7 +85,26 @@ h2 {
 .fade-leave-active {
   opacity: 0;
 }
-footer {
-  margin: 0 -1em;
+
+.scroll-up {
+  opacity: 0.3;
+  height: 2rem;
+  width: 2rem;
+  background-color: #2c383b;
+  position: sticky;
+  bottom: 0.5rem;
+  right: 0.5rem;
+  margin: 0.5rem 0 0 auto;
+  transition: opacity 0.5s;
+}
+.scroll-up:hover {
+  opacity: 1;
+}
+.go-up {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2rem;
+  width: 2rem;
 }
 </style>

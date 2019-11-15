@@ -44,7 +44,7 @@ export default {
   position: sticky;
   top: 0px;
   background: #2c383b;
-  padding: 5px 15px;
+  padding: 0.31rem 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;

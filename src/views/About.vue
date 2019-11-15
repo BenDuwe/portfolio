@@ -7,7 +7,7 @@
         class="description"
       >I'm a studious person, who's eager to learn more about the ins and outs of the world around us. My interest in nature and science first led me to obtain a master's degree in biology. And now my passion for technology has made me start learning web development and I've been enjoying every part of it.</p>
     </div>
-    <div class="hard">
+    <div class="skils">
       <h4>Skills:</h4>
       <ul class="btm-spc">
         <li>
@@ -365,22 +365,20 @@
         </li>
       </ul>
     </div>
-    <Footer />
   </div>
 </template>
 
 <script>
-import Footer from "@/components/Footer";
-
 export default {
   name: "About",
-  components: {
-    Footer
-  }
+  components: {}
 };
 </script>
 
 <style scoped>
+.about {
+  padding: 1rem;
+}
 img {
   width: 10rem;
   clip-path: polygon(0% 0%, 100% 0, 100% 75%, 50% 100%, 0 75%);

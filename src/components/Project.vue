@@ -50,13 +50,13 @@ export default {
   align-items: center; */
   /* margin-bottom: 3rem; */
   padding: 1.5em 1em 1em 1em;
-  margin: -1.5em -1em;
+  margin: -1.5em 0;
   clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 90%);
   -webkit-clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 90%);
 }
 
 .bg {
-  background: rgb(231, 242, 245) /*rgba(75, 192, 176, 0.1)*/;
+  background: rgb(244, 246, 247) /*rgba(75, 192, 176, 0.1)*/;
   clip-path: polygon(0% 0%, 100% 10%, 100% 90%, 0 100%);
   -webkit-clip-path: polygon(0% 0%, 100% 10%, 100% 90%, 0 100%);
 }
@@ -71,9 +71,11 @@ export default {
 .info {
   min-width: auto;
   max-width: auto;
-
-  text-align: center;
 }
+p {
+  text-align: justify;
+}
+
 ul {
   list-style: none;
   display: flex;
@@ -83,7 +85,7 @@ ul {
 li {
   margin: 0.625rem;
   padding: 0.31rem;
-  border: 2px solid #ff312e;
+  border: 2px solid #8b2635;
 }
 ul a {
   color: #2c333b;

@@ -1,5 +1,5 @@
 <template>
-  <div class="splash" v-bind:class="{ 'hide': $route.path !== '/' }">
+  <div class="splash">
     <div class="text">
       Hi, my name is
       <span class="highlight">Ben Duwé</span>.
@@ -7,12 +7,15 @@
     </div>
     <div>
       <button>
-        <router-link to="/about">More about me</router-link>
+        <router-link to="/about">About me</router-link>
       </button>
       <button>
-        <router-link to="/portfolio">View my projects</router-link>
+        <router-link to="/portfolio">My projects</router-link>
       </button>
     </div>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+      <path d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z" fill="#2C383B" />
+    </svg>
     <canvas></canvas>
   </div>
 </template>
@@ -26,7 +29,7 @@ export default {
     var canvas = document.querySelector("canvas");
     var splash = document.querySelector(".splash");
 
-    canvas.width = window.innerWidth;
+    canvas.width = splash.offsetWidth;
     canvas.height = splash.offsetHeight;
 
     var c = canvas.getContext("2d");
@@ -150,7 +153,7 @@ canvas {
   top: 0;
   left: 0;
   width: 100vw;
-  background: #fcfcfc;
+  background: rgba(75, 192, 176, 0.24);
   z-index: -1;
 }
 .splash {
@@ -161,7 +164,17 @@ canvas {
   align-items: center;
   flex-direction: column;
   position: relative;
-  flex-grow: 1;
+  height: calc(100vh - 3.9375em);
+  /* width: 100vw; */
+  /* border-bottom: 2px solid #2c383b; */
+}
+svg {
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .hide {
   display: none;
@@ -172,13 +185,14 @@ canvas {
   font-size: 1.4rem;
 }
 .highlight {
-  color: #4bc0b0;
+  color: #ff312e;
 }
 
 button {
   margin: 10px;
-  padding: 5px;
-  border: 2px solid #ff312e;
+  padding: 5px 0;
+  width: 6rem;
+  border: 2px solid #8b2635;
   background: none;
 }
 
