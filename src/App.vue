@@ -54,9 +54,97 @@ export default {
 html {
   overflow-x: hidden;
   scroll-behavior: smooth;
+  z-index: -10;
 }
 body {
   background: #fcfcfc;
+  z-index: -9;
+}
+
+button {
+  position: relative;
+  padding: 5px 0;
+  width: 6rem;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  border-radius: 0;
+  transition: border-radius 0.1s ease-in-out;
+}
+button::after {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: calc(100% + 4px);
+  top: 0;
+  left: -2px;
+  background: linear-gradient(
+    to right,
+    #ff312e 0%,
+    #ff312e 3%,
+    transparent 3%,
+    transparent 97%,
+    #ff312e 97%,
+    #ff312e 100%
+  );
+  z-index: -1;
+  transition: all 0.3s ease-in-out;
+}
+button:hover::after {
+  height: 20%;
+  top: 50%;
+  transform: translateY(-50%);
+  /* background: linear-gradient(
+    to right,
+    #4bc0b0 0%,
+    #4bc0b0 3%,
+    transparent 3%,
+    transparent 97%,
+    #4bc0b0 97%,
+    #4bc0b0 100%
+  ); */
+}
+button a {
+  overflow: hidden;
+  white-space: nowrap;
+
+  text-decoration: none;
+  font-weight: 700;
+
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: #2c3e50;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+button a::after {
+  overflow: hidden;
+  white-space: nowrap;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 0%;
+  width: 100%;
+  content: attr(title);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  background-color: #ff312e;
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover > a {
+  color: transparent;
+  height: 0%;
+}
+button:hover > a::after {
+  height: 100%;
+}
+
+button:hover {
+  /* border: 2px outset #8b2635; */
+  border-radius: 0 0.5rem 0;
 }
 
 /*Getting the anchors adjusted */

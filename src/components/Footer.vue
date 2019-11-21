@@ -23,6 +23,7 @@ footer {
   color: #fcfcfc;
   background: #2c383b;
   border-top: 3px solid #4bc0b0;
+  z-index: 20;
 }
 
 .highlight {

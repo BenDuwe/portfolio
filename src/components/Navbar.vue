@@ -55,7 +55,7 @@ export default {
   justify-content: space-between;
   align-items: center;
   border-bottom: 3px solid #4bc0b0;
-  z-index: 1;
+  z-index: 20;
 }
 
 ul {
@@ -63,9 +63,7 @@ ul {
   justify-content: flex-end;
   align-items: center;
   list-style: none;
-  /* font-family: "Raleway", Arial, sans-serif; */
   text-decoration: none;
-
   text-align: center;
   text-transform: uppercase;
   font-size: 0.7rem;
@@ -73,12 +71,6 @@ ul {
   letter-spacing: 1px;
 }
 
-ul * {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  -webkit-transition: all 0.35s ease;
-  transition: all 0.35s ease;
-}
 ul li {
   display: inline-block;
   list-style: none;
@@ -94,7 +86,7 @@ ul a {
 }
 ul a:before,
 ul a:after {
-  height: 3px;
+  height: 2px;
   position: absolute;
   content: "";
   -webkit-transition: all 0.35s ease;
@@ -110,14 +102,11 @@ ul a:after {
   bottom: 0;
   right: 0;
 }
-ul a:hover,
-ul a.router-link-exact-active {
+ul a:hover {
   color: rgb(252, 252, 252);
 }
 ul a:hover:before,
-ul a.router-link-exact-active:before,
-ul a:hover:after,
-ul a.router-link-exact-active:after {
+ul a:hover:after {
   width: 100%;
 }
 

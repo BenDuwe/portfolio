@@ -9,14 +9,24 @@
       <div class="info">
         <h3>{{title}}</h3>
         <p>{{description}}</p>
-        <ul>
-          <li>
-            <a :href="repository" rel="noopener noreferrer" target="_blank">View source</a>
-          </li>
-          <li v-if="page">
-            <a :href="page" rel="noopener noreferrer" target="_blank">View online</a>
-          </li>
-        </ul>
+        <div class="buttons">
+          <button>
+            <a
+              title="View source"
+              :href="repository"
+              rel="noopener noreferrer"
+              target="_blank"
+            >View source</a>
+          </button>
+          <button v-if="page">
+            <a
+              title="View online"
+              :href="page"
+              rel="noopener noreferrer"
+              target="_blank"
+            >View online</a>
+          </button>
+        </div>
       </div>
     </div>
   </div>
@@ -71,24 +81,14 @@ p {
   text-align: justify;
 }
 
-ul {
-  list-style: none;
+.buttons {
   display: flex;
   justify-content: center;
   z-index: -1;
 }
-li {
-  margin: 0.625rem;
-  padding: 0.31rem;
-  border: 2px solid #8b2635;
-}
-ul a {
-  color: #2c333b;
-  background: none;
-  font-weight: bold;
 
-  position: relative;
-  /* display: inline-block; */
+button {
+  margin: 10px;
 }
 
 .screenshot {

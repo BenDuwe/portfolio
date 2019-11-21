@@ -8,10 +8,10 @@
     </div>
     <div>
       <button>
-        <a href="#about">About me</a>
+        <a title="About me" href="#about">About me</a>
       </button>
       <button>
-        <a href="#portfolio">My projects</a>
+        <a title="My projects" href="#portfolio">My projects</a>
       </button>
     </div>
     <a href="#about">
@@ -160,7 +160,7 @@ canvas {
   left: 0;
   width: 100vw;
   background: rgb(244, 246, 247);
-  z-index: -1;
+  z-index: -8;
 }
 .splash {
   color: #2c383b;
@@ -196,20 +196,26 @@ svg {
 
 button {
   margin: 10px;
-  padding: 5px 0;
-  width: 6rem;
-  border: 2px solid #8b2635;
-  background: none;
 }
 
-button a {
-  text-decoration: none;
-  font-weight: bold;
-  color: #2c383b;
+/* Media-queries based on Hight */
+
+@media only screen and (max-height: 375px) {
+  svg {
+    bottom: 1.7rem;
+  }
 }
+
+/* Media-queries based on width */
+
 @media only screen and (min-width: 768px) {
   .text {
     font-size: 3rem;
+  }
+}
+@media only screen and (min-width: 4096px) {
+  .text {
+    font-size: 9rem;
   }
 }
 </style>
