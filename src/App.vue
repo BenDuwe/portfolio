@@ -71,6 +71,7 @@ button {
   border-radius: 0;
   transition: border-radius 0.1s ease-in-out;
 }
+
 button::after {
   position: absolute;
   content: "";
@@ -80,12 +81,10 @@ button::after {
   left: -2px;
   background: linear-gradient(
     to right,
-    #ff312e 0%,
     #ff312e 3%,
     transparent 3%,
     transparent 97%,
-    #ff312e 97%,
-    #ff312e 100%
+    #ff312e 97%
   );
   z-index: -1;
   transition: all 0.3s ease-in-out;
@@ -94,15 +93,6 @@ button:hover::after {
   height: 20%;
   top: 50%;
   transform: translateY(-50%);
-  /* background: linear-gradient(
-    to right,
-    #4bc0b0 0%,
-    #4bc0b0 3%,
-    transparent 3%,
-    transparent 97%,
-    #4bc0b0 97%,
-    #4bc0b0 100%
-  ); */
 }
 button a {
   overflow: hidden;
@@ -110,21 +100,37 @@ button a {
 
   text-decoration: none;
   font-weight: 700;
+  height: 100%;
+  background-image: linear-gradient(
+    to right,
+    #2c3e50,
+    #2c3e50 50%,
+    #ff312e 50%,
+    #ff312e
+  );
+  background-size: 200% 100%;
+
+  /* background-image: linear-gradient(
+    to right,
+    #ff312e 0%,
+    #2c3e50 100%
+  ); */
 
   background-clip: text;
   -webkit-background-clip: text;
-  color: #2c3e50;
+  color: transparent; /*#2c3e50*/
   position: relative;
   transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
 }
-button a::after {
+/* button a::before {
   overflow: hidden;
   white-space: nowrap;
   position: absolute;
   top: 0;
   left: 0;
-  height: 0%;
-  width: 100%;
+  height: 100%;
+  width: 0%;
   content: attr(title);
   color: transparent;
   background-clip: text;
@@ -132,15 +138,39 @@ button a::after {
 
   background-color: #ff312e;
   transition: all 0.3s ease-in-out;
-}
+} */
+/* button a::after {
+  overflow: hidden;
+  white-space: nowrap;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  content: attr(title);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  background-color: #2c3e50;
+  transition: all 0.3s ease-in-out;
+} */
 
 button:hover > a {
-  color: transparent;
-  height: 0%;
+  background-position: -100% 0;
+  /* background-image: linear-gradient(
+    to right,
+    #ff312e 100%,
+    #2c3e50 0%
+  ); */
+  /* color: transparent; */
 }
-button:hover > a::after {
-  height: 100%;
-}
+/* button:hover > a::before {
+  width: 100%;
+} */
+/* button:hover > a::after {
+  width: 0%;
+} */
 
 button:hover {
   /* border: 2px outset #8b2635; */

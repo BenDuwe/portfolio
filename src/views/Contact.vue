@@ -3,9 +3,9 @@
     <a name="contact"></a>
     <h2>Contact</h2>
     <p>Have a question?</p>
-    <p>Want to work together?</p>
+    <p>Or perhaps want to hire me?</p>
     <button @click="toggleState = !toggleState">
-      <a title="Get in touch!" href="#contact">Get in touch!</a>
+      <a title="Get in touch!">Get in touch!</a>
     </button>
     <div class="pop-up" :class="{ hide: toggleState }" @click.self="closePopup" @close="closePopup">
       <div class="pop-up__content">
@@ -114,6 +114,7 @@ ul {
 }
 button {
   width: 8rem;
+  margin: 1rem 0;
 }
 button a {
   font-size: 1.1rem;
