@@ -415,4 +415,16 @@ li {
   height: 40px;
   width: 40px;
 }
+@media only screen and (min-width: 768px) {
+  .person {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  img {
+    width: 15rem;
+    margin-right: 1rem;
+    clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+  }
+}
 </style>

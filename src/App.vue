@@ -109,13 +109,6 @@ button a {
     #ff312e
   );
   background-size: 200% 100%;
-
-  /* background-image: linear-gradient(
-    to right,
-    #ff312e 0%,
-    #2c3e50 100%
-  ); */
-
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent; /*#2c3e50*/
@@ -123,57 +116,12 @@ button a {
   transition: all 0.3s ease-in-out;
   -webkit-transition: all 0.3s ease-in-out;
 }
-/* button a::before {
-  overflow: hidden;
-  white-space: nowrap;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 0%;
-  content: attr(title);
-  color: transparent;
-  background-clip: text;
-  -webkit-background-clip: text;
-
-  background-color: #ff312e;
-  transition: all 0.3s ease-in-out;
-} */
-/* button a::after {
-  overflow: hidden;
-  white-space: nowrap;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  content: attr(title);
-  color: transparent;
-  background-clip: text;
-  -webkit-background-clip: text;
-
-  background-color: #2c3e50;
-  transition: all 0.3s ease-in-out;
-} */
 
 button:hover > a {
   background-position: -100% 0;
-  /* background-image: linear-gradient(
-    to right,
-    #ff312e 100%,
-    #2c3e50 0%
-  ); */
-  /* color: transparent; */
 }
-/* button:hover > a::before {
-  width: 100%;
-} */
-/* button:hover > a::after {
-  width: 0%;
-} */
 
 button:hover {
-  /* border: 2px outset #8b2635; */
   border-radius: 0 0.5rem 0;
 }
 

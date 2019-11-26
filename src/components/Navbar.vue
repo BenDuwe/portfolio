@@ -56,6 +56,9 @@ export default {
   align-items: center;
   border-bottom: 3px solid #4bc0b0;
   z-index: 20;
+  -webkit-box-shadow: 0px 0px 10px 0px #2c383b;
+  -moz-box-shadow: 0px 0px 10px 0px #2c383b;
+  box-shadow: 0px 0px 10px 0px #2c383b;
 }
 
 ul {

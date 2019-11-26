@@ -116,4 +116,9 @@ export default {
 .portfolio {
   padding: 1rem;
 }
+
+@media only screen and (min-width: 768px) {
+  .portfolio {
+  }
+}
 </style>

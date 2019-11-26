@@ -7,8 +7,8 @@
         </a>
       </div>
       <div class="info">
-        <h3>{{title}}</h3>
-        <div class="aspects">
+        <div class="heading">
+          <h3>{{title}}</h3>
           <div class="skills">{{skills}}</div>
         </div>
         <p>{{description}}</p>
@@ -59,8 +59,8 @@ export default {
 .project {
   z-index: -1;
   padding: 1em 1em 1em 1em;
-  margin: -1rem;
-  /* margin-top: -1rem; */
+  margin: -0.5rem -1rem;
+  /* padding-top: -1rem; */
   /* clip-path: polygon(0 7%, 100% 0, 100% 100%, 0 93%);
   -webkit-clip-path: polygon(0 7%, 100% 0, 100% 100%, 0 93%); */
 }
@@ -78,36 +78,48 @@ export default {
   align-items: center;
   padding: 1rem 0;
 }
-.aspects {
-  display: flex;
-  width: fit-content;
-  font-style: italic;
-  opacity: 0.5;
-  transition: all 0.3s ease-in-out;
-}
-.aspects:hover {
-  opacity: 1;
-}
 h4 {
-  margin-right: 0.3rem;
-}
-.skills {
-  text-transform: uppercase;
-  font-weight: 400;
+  padding-right: 0.3rem;
 }
 
 .info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   min-width: auto;
   max-width: auto;
 }
-p {
-  text-align: justify;
+.info .heading {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: inherit;
+}
+.info .heading .skills {
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  font-weight: 400;
+  margin-left: 1rem;
+  opacity: 0.5;
+  transition: all 0.3s ease-in-out;
 }
 
-.buttons {
+.project:hover {
+  opacity: 1;
+}
+.project:hover .info .heading .skills {
+  color: #4bc0b0;
+  opacity: 1;
+}
+.info p {
+  text-align: justify;
+}
+.info .buttons {
+  align-self: center;
   display: flex;
   justify-content: center;
-  z-index: -1;
+  /* z-index: 3; */
 }
 
 button {
@@ -115,16 +127,140 @@ button {
 }
 
 .screenshot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   overflow: hidden;
-  width: 20rem;
+  height: 10rem;
+  min-width: 10rem;
 }
 .screenshot img {
-  max-height: 5rem;
-  max-width: 8rem;
+  height: auto;
+  width: 8rem;
+
   transform: scale(1);
   transition: all 0.5s ease-in-out;
 }
 .screenshot img:hover {
   transform: scale(1.1);
+}
+
+@media only screen and (min-width: 768px) {
+  .project {
+    opacity: 0.9;
+    transition: all 0.3s ease-in-out;
+  }
+  .project:hover {
+    opacity: 1;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .screenshot img {
+    height: auto;
+    width: 8rem;
+  }
+  .project .screenshot {
+    min-height: 100%;
+    /* width: 33vw; */
+    padding-right: 1rem;
+  }
+  .project .info {
+    position: relative;
+    width: 75vw;
+    padding-left: 1rem;
+    margin-left: 2.5rem;
+    /* border-left: 3px solid #4bc0b0; */
+  }
+  .project .info::before {
+    position: absolute;
+    top: -1rem;
+    left: -2.5rem;
+    content: "";
+    background: rgb(44, 56, 59);
+    background: -moz-linear-gradient(
+      180deg,
+      rgba(44, 56, 59, 1) 0%,
+      rgba(44, 56, 59, 1) 50%,
+      rgba(75, 192, 176, 1) 50%,
+      rgba(75, 192, 176, 1) 100%
+    );
+    background: -webkit-linear-gradient(
+      180deg,
+      rgba(44, 56, 59, 1) 0%,
+      rgba(44, 56, 59, 1) 50%,
+      rgba(75, 192, 176, 1) 50%,
+      rgba(75, 192, 176, 1) 100%
+    );
+    background: linear-gradient(
+      180deg,
+      rgba(44, 56, 59, 1) 0%,
+      rgba(44, 56, 59, 1) 50%,
+      rgba(75, 192, 176, 1) 50%,
+      rgba(75, 192, 176, 1) 100%
+    );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#2c383b",endColorstr="#4bc0b0",GradientType=1);
+    background-size: 100% 200%;
+    height: calc(100% + 2rem);
+    width: 3px;
+    transition: all 0.2s ease-in-out;
+  }
+  .project:hover .info::before {
+    background-position: 0 -100%;
+  }
+
+  .bg .screenshot {
+    order: 2;
+    padding-right: 0;
+    padding-left: 1rem;
+  }
+  .bg .info {
+    padding-left: 0;
+    padding-right: 1rem;
+    margin-right: 2.5rem;
+    margin-left: 0;
+
+    /* border-right: 3px solid #4bc0b0; */
+    /* border-left: none; */
+  }
+  .bg .info::after {
+    position: absolute;
+    top: -1rem;
+    right: -2.5rem;
+    content: "";
+    background: rgb(44, 56, 59);
+    background: -moz-linear-gradient(
+      180deg,
+      rgba(44, 56, 59, 1) 0%,
+      rgba(44, 56, 59, 1) 50%,
+      rgba(75, 192, 176, 1) 50%,
+      rgba(75, 192, 176, 1) 100%
+    );
+    background: -webkit-linear-gradient(
+      180deg,
+      rgba(44, 56, 59, 1) 0%,
+      rgba(44, 56, 59, 1) 50%,
+      rgba(75, 192, 176, 1) 50%,
+      rgba(75, 192, 176, 1) 100%
+    );
+    background: linear-gradient(
+      180deg,
+      rgba(44, 56, 59, 1) 0%,
+      rgba(44, 56, 59, 1) 50%,
+      rgba(75, 192, 176, 1) 50%,
+      rgba(75, 192, 176, 1) 100%
+    );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#2c383b",endColorstr="#4bc0b0",GradientType=1);
+    background-size: 100% 200%;
+    height: calc(100% + 2rem);
+    width: 3px;
+    transition: all 0.2s ease-in-out;
+  }
+  .project:hover .info::after {
+    background-position: 0 -100%;
+  }
 }
 </style>
