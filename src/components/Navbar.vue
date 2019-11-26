@@ -120,10 +120,6 @@ path:nth-child(2) {
   transition: all 0.2s ease-in-out;
 }
 
-svg:hover path:nth-child(2) {
-  fill: #ff312e;
-}
-
 @media only screen and (min-width: 768px) {
   ul {
     font-size: 1rem;

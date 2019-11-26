@@ -91,25 +91,21 @@ h4 {
 }
 .info .heading {
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
+  flex-direction: column;
+  /* justify-content: flex-start; */
   align-items: center;
-  width: inherit;
+  width: 100%;
 }
 .info .heading .skills {
   text-transform: uppercase;
   font-size: 0.9rem;
   font-weight: 400;
   margin-left: 1rem;
-  opacity: 0.5;
+  opacity: 1;
   transition: all 0.3s ease-in-out;
 }
 
 .project:hover {
-  opacity: 1;
-}
-.project:hover .info .heading .skills {
-  color: #4bc0b0;
   opacity: 1;
 }
 .info p {
@@ -151,6 +147,19 @@ button {
     transition: all 0.3s ease-in-out;
   }
   .project:hover {
+    opacity: 1;
+  }
+  .info .heading {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .project .info .heading .skills {
+    opacity: 0.5;
+  }
+  .project:hover .info .heading .skills {
+    color: #4bc0b0;
     opacity: 1;
   }
 
