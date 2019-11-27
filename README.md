@@ -1,6 +1,6 @@
 # portfolio
 
-## Work in porgress.
+## First Final version.
 
 My first try at making a portfolio using Vue.js.  
 [Click here to open my portfolio](https://benduwe.github.io/portfolio/#/)
