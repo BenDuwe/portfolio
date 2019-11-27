@@ -143,11 +143,9 @@ button {
 
 @media only screen and (min-width: 768px) {
   .project {
-    opacity: 0.9;
     transition: all 0.3s ease-in-out;
   }
   .project:hover {
-    opacity: 1;
   }
   .info .heading {
     display: flex;
@@ -189,7 +187,7 @@ button {
     top: -1rem;
     left: -2.5rem;
     content: "";
-    background: rgb(44, 56, 59);
+    background: #2c383b;
     background: -moz-linear-gradient(
       180deg,
       rgba(44, 56, 59, 1) 0%,
